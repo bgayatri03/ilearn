@@ -1,10 +1,13 @@
+import logo from './logo.svg';
 import './App.css';
+import Dice from './Dice'
+import SnakesAndLadders from './SnakesAndLaddersGame';
 
 function App() {
   return (
     <div className="App">
-      <h1> GB's Dev Check</h1>
-      <h1>Swa's dev branch</h1>
+      {/* <h1>Roll the dice</h1> */}
+      <SnakesAndLadders/>
     </div>
   );
 }
