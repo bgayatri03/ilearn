@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Styles/SnakesAndLaddersGame.css'
+import SnakesAndLaddersGrid from './SnakesAndLadders/SnakesAndLaddersGrid'
 
 const SnakesAndLadders = () => {
     const [myNum, setMyNum] = useState(1);
@@ -54,7 +55,8 @@ const SnakesAndLadders = () => {
                     </div>
                     <button id="rollButton" onClick={rollDice}>Roll Dice</button>
                 </div>
-                <div className="boardContainer">
+                <SnakesAndLaddersGrid />
+                {/* <div className="boardContainer">
                     <div class="box" id="b100">
 
 
@@ -359,7 +361,7 @@ const SnakesAndLadders = () => {
                     <div class="box" id="b10">
 
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

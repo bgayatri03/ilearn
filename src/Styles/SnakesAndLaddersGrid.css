@@ -1,0 +1,39 @@
+.gridBoardImageCont {
+    height: 530px;
+    width: 545px;
+}
+
+.gridBoard {
+    height: 530px;
+    width: 545px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridRow {
+    height: 53px;
+    width: 545px;
+    display: flex;
+}
+
+.gridBlock {
+    height: 53px;
+    width: 53px;
+    /* background-color: aquamarine; */
+    border: 1px solid black;
+}
+
+#gameBoardImage {
+    position: relative;
+    height: 532px;
+    width: 545px;
+    top: -530px;
+}
+
+.shadow{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+  }
