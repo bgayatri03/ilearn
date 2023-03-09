@@ -1,0 +1,29 @@
+.navigationBar{
+    background: #D9FF8D;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.Title{
+    height: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 15px;
+}
+.Title h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: left;
+    /* color: azure; */
+}
+.Logo{
+    height: 100px;
+    width: 5%;
+    display: flex;  
+    justify-content: flex-start;
+    align-items: center;
+}
