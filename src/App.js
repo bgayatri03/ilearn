@@ -1,20 +1,27 @@
-import './App.css';
-//import Dice from './Dice'
-//import SnakesAndLaddersBoardGrid from './SnakesAndLaddersComponents/SnakesAndLaddersBoardGrid'
-// import SnakesAndLaddersGrid from './SnakesAndLadders/SnakesAndLaddersGrid'
-import SnakesAndLadders from './SnakesAndLaddersGame';
-import HomePage from './HomePage/homePage';
-import LearnCategories from './Learn/learnCategories';
-import {BrowserRouter,Routes,Route} from "react-router-dom";
+import "./App.css";
+import SnakesAndLadders from "./SnakesAndLaddersGame";
+import HomePage from "./HomePage/homePage";
+import LearningCategories from "./Learn/learningCategories";
+import Learn from "./Learn/learn";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<HomePage/>} />
-          <Route exact path="/snakesAndLaddersGame" element={<SnakesAndLadders />} />
-          <Route exact path="/learnCategories" element={<LearnCategories/>}/>
+          <Route exact path="/" element={<HomePage />} />
+          <Route
+            exact
+            path="/snakesAndLaddersGame"
+            element={<SnakesAndLadders />}
+          />
+          <Route
+            exact
+            path="/learningCategories"
+            element={<LearningCategories />}
+          />
+          <Route exact path="/learn" element={<Learn />} />
         </Routes>
       </BrowserRouter>
     </div>
