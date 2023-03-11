@@ -8,7 +8,7 @@ import dashboardImg from '../Images/Dashboard.png';
 
 const HomePage = () => {
     const playGame = () => {
-        window.location.pathname = '/snakesAndLaddersGame';
+        window.location.pathname = '/startGame';
     }
     const learn = () => {
         window.location.pathname = '/learningCategories';

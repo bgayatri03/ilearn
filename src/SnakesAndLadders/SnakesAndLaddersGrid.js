@@ -9,7 +9,7 @@ const SnakesAndLaddersGrid = () => {
         <div className="gridBoardImageCont">
             <div className="gridBoard">
                 {[...Array(p)].map((e, i) => <div className="gridRow" key={i}>
-                    {[...Array(s)].map((e, i) => <div className="gridBlock" key={i}></div>)}
+                    {[...Array(s)].map((e, j) => <div id={`block`+i+j} className="gridBlock" key={j}></div>)}
                 </div>)}
             </div>
             <img id="gameBoardImage" className="shadow" src={GameBoard} alt=""></img>

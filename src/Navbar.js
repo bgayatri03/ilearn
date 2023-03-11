@@ -6,9 +6,9 @@ import HomeIcon from "@mui/icons-material/Home";
 
 const Navbar = () => {
   return (
-    <div className="navigationBar">
-      <div className="Title">
-        <h3> iLearn </h3>
+    <div className='navigationBar'>
+      <div className='Title'> 
+        <h3 className='navHeadingFont'> iLearn </h3>
       </div>
       <div className="homeLogo">
         <Button component={Link} to="/">

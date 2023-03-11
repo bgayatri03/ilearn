@@ -64,35 +64,35 @@
     cursor: pointer;
 }
 .lionCard{
-    background-color: #f99cc7;
+    background-color: #d7f9f8;
     grid-area: lion;
 }
 .horseCard{
-    background-color: #f99cc7;
+    background-color: #d7f9f8;
     grid-area: horse;
 }
 .dogCard{
-    background-color: #f99cc7;
+    background-color: #d7f9f8;
     grid-area: dog;
 }
 .catCard{
-    background-color: #f99cc7;
+    background-color: #d7f9f8;
     grid-area: cat;
 }
 .cowCard{
-    background-color: #f99cc7;
+    background-color: #d7f9f8;
     grid-area: cow;
 }
 .elephantCard{
-     background-color: #f99cc7;
+     background-color: #d7f9f8;
     grid-area: elephant;
 }
 .frogCard{
-    background-color: #f99cc7;
+    background-color: #d7f9f8;
     grid-area: frog;
 }
 .sheepCard{
-    background-color: #f99cc7;
+    background-color: #d7f9f8;
     grid-area: sheep;
 }
 

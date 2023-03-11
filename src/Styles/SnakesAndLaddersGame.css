@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/comic-sans');
+
 .mainDiv {
     height: 100%;
     width: 100%;
@@ -45,8 +47,8 @@
     height: 20px;
     margin: -10px 5px 5px -10px;
     border-radius: 20px;
-    background-color: #f25f5c;
-    box-shadow: inset 2px 2px #d90429;
+    background-color: #353434;
+    box-shadow: inset 2px 2px #121212;
 }
 
 .diceSide {
@@ -60,20 +62,38 @@
     line-height: 2em;
 }
 
+#gameBoardImage {
+    position: relative;
+    height: 540;
+    width: 542px;
+    height: 545px;
+    left: -542px;
+    z-index: 2;
+    /* top: 1px; */
+}
+
+/* .shadow{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+  } */
+
 #rollButton {
-    padding: 15px 50px;
+    padding: 10px 40px;
     color: #fff;
-    background-color: darkcyan;
+    background-image: linear-gradient(to bottom right, #471683, #b397fa);
     border: none;
-    font-size: 30px;
-    border-radius: 20px;
+    font-size: 22px;
+    border-radius: 15px;
     box-shadow: 1px 3px #50514f;
     outline: none;
     transition: .3s;
-    margin-top: -40px;
+    margin-top: 34px;
+    font-family: 'Comic Sans', sans-serif;
 }
 
-#rollButton:hover, #rollButton:active {
+#rollButton:hover,
+#rollButton:active {
     outline: none;
     background-color: #50514f;
     cursor: pointer;
@@ -149,27 +169,38 @@
     transform: rotateX(180deg) rotateZ(-1440deg);
 }
 
-.two-1, .three-1, .four-1, .five-1, .six-1 {
+.two-1,
+.three-1,
+.four-1,
+.five-1,
+.six-1 {
     top: 20%;
     left: 20%;
 }
 
-.four-3, .five-3, .six-4 {
+.four-3,
+.five-3,
+.six-4 {
     top: 20%;
     left: 80%;
 }
 
-.one-1, .three-2, .five-5 {
+.one-1,
+.three-2,
+.five-5 {
     top: 50%;
     left: 50%;
 }
 
-.four-2, .five-2, .six-3 {
+.four-2,
+.five-2,
+.six-3 {
     top: 80%;
     left: 80%;
 }
 
-.two-2, .three-3 {
+.two-2,
+.three-3 {
     top: 80%;
     left: 80%;
 }
@@ -184,7 +215,42 @@
     left: 80%;
 }
 
-.four-4, .five-4, .six-6 {
+.box-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.startGameContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.four-4,
+.five-4,
+.six-6 {
     left: 20%;
     top: 80%;
+}
+
+.token {
+    height: 20px;
+    width: 20px;
+    background-color: #e5e5e5;
+    position: relative;
+    top: 241px;
+    left: -10px;
+    border-radius: 10px;
+    border: 2px solid;
+}
+
+.modal-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 90%;
+    background-color: rgb(104, 225, 236);
+    border: 2px solid #0000;
+    box-shadow: 24;
 }
