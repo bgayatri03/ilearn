@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/comic-sans');
+@import url('https://fonts.cdnfonts.com/css/chalk');
 
 .mainDiv {
     height: 100%;
@@ -250,7 +251,163 @@
     transform: translate(-50%, -50%);
     width: 60%;
     height: 90%;
-    background-color: rgb(104, 225, 236);
+    background-color: #f1eadc;
     border: 2px solid #0000;
     box-shadow: 24;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+/* .tank{
+    position:relative;
+     margin:50px;
+}
+
+.tank .middle{
+    width:120px;
+    height:180px;
+    background-color:#c244d1;
+    position:absolute;
+}
+
+.tank .top{
+    width: 120px;
+    height: 50px;
+    background-color:#d579df;
+    -moz-border-radius: 60px / 25px;
+    -webkit-border-radius: 60px / 25px;
+    border-radius: 60px / 25px;
+    position:absolute;
+    top:-25px;
+}
+
+.tank .bottom{
+    width: 120px;
+    height: 50px;
+    background-color:#c244d1;
+    -moz-border-radius: 60px / 25px;
+    -webkit-border-radius: 60px / 25px;
+    border-radius: 60px / 25px;
+    position:absolute;
+    top:155px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.75)
+} */
+
+.modalContentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.instructionContainer {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.instructionText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    /* font-weight: bold; */
+    width: 88%;
+    /* font-family: 'Comic Sans', sans-serif; */
+    font-family: 'Chalk', sans-serif;
+    color: #720a0a;                    
+}
+
+#instructionButton {
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #08878d, #a8e6e9);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 3px #999595;
+    width: 45px;
+    height: 45px;
+}
+
+#instructionButton:hover,
+#instructionButton:active {
+    outline: none;
+    background-color: #50514f;
+    cursor: pointer;
+    transform: translateY(1px);
+}
+
+.soundButtonsContainer {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+.soundCardButton {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, #471683, #b397fa);
+    box-shadow: 1px 3px #999595;
+    border: none;
+    margin-right: 5px;
+}
+.soundCardButton:hover,
+.soundCardButton:active {
+    outline: none;
+    background-color: #50514f;
+    cursor: pointer;
+    transform: translateY(1px);
+}
+
+.slowSoundButton {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, #f23ca0, #f374ba);
+    box-shadow: 1px 3px #999595;
+    border: none;
+    margin-left: 5px;
+}
+
+.slowSoundButton:hover,
+.slowSoundButton:active {
+    outline: none;
+    background-color: #50514f;
+    cursor: pointer;
+    transform: translateY(1px);
+}
+
+.optionsContainer{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+}
+
+.optionCard {
+    height: 60%;
+    width: 24%;
+    background-color: #A6F20D;
+    border-radius: 10px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionCard:hover {
+    transform: translateX(3px) translateY(3px);
+    cursor: pointer;
+}
+
+.optionsImage {
+    height: 120px;
+    width: 120px;
 }

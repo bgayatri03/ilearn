@@ -72,7 +72,7 @@
 
 #startGameButton {
     /* background-image: linear-gradient(to bottom right, #471683, #b397fa); */
-    padding: 10px 30px;
+    /* padding: 10px 30px; */
     color: #fff;
     background-image: linear-gradient(to bottom right, #40cf04, #c3fa54);
     border: none;
@@ -85,6 +85,12 @@
     margin-top: 50px;
     margin-bottom: 20px;
     font-family: 'Comic Sans', sans-serif;
-    width: 200px;
+    /* width: 200px; */
+}
+
+.outerStartButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 

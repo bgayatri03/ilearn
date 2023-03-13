@@ -6,12 +6,13 @@ import { allSnakesBoxes, allLaddersBoxes } from "./SnakeLadderPositions";
 import Navbar from '../Navbar';
 import '../Styles/StartGame.css'
 import { none } from "ramda";
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 const StartGame = () => {
     const [currentPosition, setCurrentPosition] = useState(0);
     const [displayLayout, setDisplayLayout] = useState(false)
     const [hideThemeScreen, setHideThemeScreen] = useState(false)
-    const [showModal, setShowModal] = useState(false)
+    const [showModal, setShowModal] = useState(true)
     const [selectedLevel, setSelectedLevel] = useState("");
     const [checkAnimals, setCheckAnimals] = useState(false)
     const [checkBirds, setCheckBirds] = useState(false)
@@ -138,11 +139,13 @@ const StartGame = () => {
                                 </div>: none
                             }
                         </div>
-                        <button id="startGameButton" onClick={initGame}>Start Game</button>
+                        <div className="outerStartButton">
+                            <button id="startGameButton" onClick={initGame}><PlayArrowIcon style={{fontSize: 44, marginTop: 5}}/></button>
+                        </div>
                     </div>
                 </div>
             }
-            {hideThemeScreen && <SnakesAndLadders currentPlace={currentPosition} changePosition={updatePosition} changeModalState={updateModalState} modalState={showModal} checkBoxValues={checkedState} />}
+            {hideThemeScreen && <SnakesAndLadders currentPlace={currentPosition} changePosition={updatePosition} changeModalState={updateModalState} modalState={showModal} checkBoxValues={checkedState} level={selectedLevel}/>}
         </div>
     );
 }
