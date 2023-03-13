@@ -12,11 +12,12 @@ const StartGame = () => {
     const [currentPosition, setCurrentPosition] = useState(0);
     const [displayLayout, setDisplayLayout] = useState(false)
     const [hideThemeScreen, setHideThemeScreen] = useState(false)
-    const [showModal, setShowModal] = useState(true)
+    const [showModal, setShowModal] = useState(false)
     const [selectedLevel, setSelectedLevel] = useState("");
     const [checkAnimals, setCheckAnimals] = useState(false)
     const [checkBirds, setCheckBirds] = useState(false)
     const [checkGeneral, setCheckGeneral] = useState(false)
+    const [snakeOrLadderPosition, setSnakeOrLadderPosition] = useState(0)
 
     const initGame = () => {
         // console.log("Inside initGame")
@@ -31,26 +32,37 @@ const StartGame = () => {
         checkForSnakeOrLadder(newPosition);
     }
 
+    const updatePositionAfterSnakeOrLadder = (newPosition) =>{
+        setShowModal(false)
+        setTimeout(() => {
+            setCurrentPosition(newPosition)
+        }, 1000);
+    }
+
     const checkForSnakeOrLadder = (newPosition) => {
         const positionToCheckForSnakeOrLadder = newPosition
         console.log("positionToCheckForSnakeOrLadder", positionToCheckForSnakeOrLadder)
         allSnakesBoxes.forEach(snake => {
             if (snake.currentPosition === positionToCheckForSnakeOrLadder) {
                 setShowModal(true)
-                alert(
-                    `Bad Luck! Snake caught you - Going to position ${snake.moveToPosition
-                    }`
-                );
+                setSnakeOrLadderPosition(snake.moveToPosition)
+                // alert(
+                //     `Bad Luck! Snake caught you - Going to position ${snake.moveToPosition
+                //     }`
+                // );
+                // updatePosition(snake.moveToPosition)
             }
         });
 
         allLaddersBoxes.forEach(ladder => {
             if (ladder.currentPosition === positionToCheckForSnakeOrLadder) {
                 setShowModal(true)
-                alert(
-                    `Great! Ladder taking u to position ${ladder.moveToPosition
-                    }`
-                );
+                setSnakeOrLadderPosition(ladder.moveToPosition)
+                // alert(
+                //     `Great! Ladder taking u to position ${ladder.moveToPosition
+                //     }`
+                // );
+                // updatePosition(ladder.moveToPosition)
             }
         });
     }
@@ -145,7 +157,7 @@ const StartGame = () => {
                     </div>
                 </div>
             }
-            {hideThemeScreen && <SnakesAndLadders currentPlace={currentPosition} changePosition={updatePosition} changeModalState={updateModalState} modalState={showModal} checkBoxValues={checkedState} level={selectedLevel}/>}
+            {hideThemeScreen && <SnakesAndLadders currentPlace={currentPosition} changePosition={updatePosition} changeModalState={updateModalState} modalState={showModal} checkBoxValues={checkedState} level={selectedLevel} snakeOrLadderPosition={snakeOrLadderPosition} updatePositionAfterSnakeOrLadder={updatePositionAfterSnakeOrLadder}/>}
         </div>
     );
 }

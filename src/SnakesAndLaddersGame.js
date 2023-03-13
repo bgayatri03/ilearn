@@ -16,30 +16,34 @@ const SnakesAndLadders = props => {
     const myPosition = props.currentPlace
     const modalState = props.modalState
     const checkboxesValues = props.checkBoxValues
+
+    const [score, setScore] = useState(0)
+    const [questionsAsked, setQuestionsAsked] = useState(0)
     let checkboxes=[];
-    for(let i=0; i<checkboxesValues.length; i++){
-        if(i==0 && checkboxesValues[i]==true){
-            checkboxes.push({name: 'Animals', path: './animal_category.png'})
+    if(props.level == 'basic'){
+        for(let i=0; i<checkboxesValues.length; i++){
+            if(i==0 && checkboxesValues[i]==true){
+                checkboxes.push({name: 'Animals', path: './animal_category.png'})
+            }
+            else if(i==1 && checkboxesValues[i]==true){
+                checkboxes.push({name: 'Birds', path: './bird_category.png'})
+            }
+            else if(i==2 && checkboxesValues[i]==true){
+                checkboxes.push({name: 'General', path: './general_category.png'})
+            }
         }
-        else if(i==1 && checkboxesValues[i]==true){
-            checkboxes.push({name: 'Birds', path: './bird_category.png'})
-        }
-        else if(i==2 && checkboxesValues[i]==true){
-            checkboxes.push({name: 'General', path: './general_category.png'})
-        }
+    console.log("checkboxesValues...",checkboxesValues)
+    console.log("checkboxes...",checkboxes)
     }
     console.log("myPosition...",myPosition)
     console.log("modalState...",modalState)
-    console.log("checkboxesValues...",checkboxesValues)
-    console.log("checkboxes...",checkboxes)
     const [myNum, setMyNum] = useState(0);
     let audio = new Audio("/DiceRollingSound.mp3")
 
     let soundData = [];
-    // mySoundData.forEach((item,index) => {
-    //     if(mySoundData[index].category == )
-    // })
-
+    let soundRecord;
+    let mySoundRecord;
+    if(props.level == 'basic'){
     for(let i=0; i<mySoundData.length; i++){
         for(let j=0; j<checkboxes.length; j++){
             if(mySoundData[i].category == checkboxes[j].name){
@@ -48,12 +52,16 @@ const SnakesAndLadders = props => {
             }
         }
     }
-
     console.log("Sound Data Filtered", soundData)
-
-    const soundRecord = soundData[Math.floor(Math.random() * soundData.length)];
+    soundRecord = soundData[Math.floor(Math.random() * soundData.length)];
     console.log("soundRecord...",soundRecord)
-    let mySoundRecord = new Audio(soundRecord.path)
+    mySoundRecord = new Audio(soundRecord.path)
+    }
+    else {
+    soundRecord = mySoundData[Math.floor(Math.random() * mySoundData.length)];
+    console.log("soundRecord...",soundRecord)
+    mySoundRecord = new Audio(soundRecord.path)
+    }
 
     const soundCardHandler = () => {
         console.log("Inside soundCardHandler")
@@ -97,6 +105,8 @@ const SnakesAndLadders = props => {
         console.log("dice in change", dice)
         if(myPosition + dice >= 100){
             alert('Game Over!')
+            console.log("No. of questions asked...", questionsAsked)
+            console.log("Correctly answered...", score)
         }
         else{
             props.changePosition(myPosition + dice)
@@ -106,11 +116,27 @@ const SnakesAndLadders = props => {
     const checkAnswer = (e) => {
         const clickedCardId = e.currentTarget.id;
         console.log("clickedCardId",clickedCardId)
+        setQuestionsAsked(questionsAsked+1)
+        console.log("questionsAsked",questionsAsked)
 
         if(clickedCardId == soundRecord.answer){
+            setScore(score+1)
+            console.log("score",score)
             alert("Yayy! Correct Answer")
+            props.changeModalState()
+            if(props.currentPlace < props.snakeOrLadderPosition){
+                props.updatePositionAfterSnakeOrLadder(props.snakeOrLadderPosition)
+            }
+            
         }
-        else alert("Oops! Wrong Answer")
+        else{
+            console.log("score",score)
+            alert("Oops! Wrong Answer")
+            props.changeModalState()
+            if(props.currentPlace > props.snakeOrLadderPosition){
+                props.updatePositionAfterSnakeOrLadder(props.snakeOrLadderPosition)
+            }
+        }
     }
     return (
         <div className="mainDiv">
@@ -173,14 +199,30 @@ const SnakesAndLadders = props => {
                                     <button className="soundCardButton" onClick={soundCardHandler}><VolumeUpIcon style={{fontSize: 50, color: '#fff'}}/></button>
                                     <button className="slowSoundButton" onClick={slowSoundCardHandler}><SlowMotionVideoIcon style={{fontSize: 35, color: '#fff'}}/></button>
                                 </div>
+                                {
+                                    props.level === "basic" ?
                                 <div className="optionsContainer">
                                     {checkboxes.map((item,index) => (
                                         <div id={item.name} key={index} className="optionCard" onClick={checkAnswer}>
                                             <img className="optionsImage" src={checkboxes[index].path}/>
                                         </div>
                                     ))}
-                                    {/* <div className="optionCard"></div> */}
-                                </div>
+                                </div> : null 
+                                }
+                                {
+                                    props.level === "advance" ?
+                                <div className="optionsContainer">
+                                        <div id="Animals" className="optionCard" onClick={checkAnswer}>
+                                            <img className="optionsImage" src='/animal_category.png'/>
+                                        </div>
+                                        <div id="Birds" className="optionCard" onClick={checkAnswer}>
+                                            <img className="optionsImage" src='/bird_category.png'/>
+                                        </div>
+                                        <div id="General" className="optionCard" onClick={checkAnswer}>
+                                            <img className="optionsImage" src='/general_category.png'/>
+                                        </div>
+                                </div> : null
+                                }
                             </div>
                         </Box>
                     </Modal>
