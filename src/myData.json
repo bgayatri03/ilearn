@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "category": "Animals",
+    "name": "Lion",
+    "image": "/img/animals/lion.png",
+    "sound": "/sounds/animalSounds/lionSound.mp3",
+    "pronunciation": "/sounds/pronunciations/lionPronunciation.mp3"
+  },
+  {
+    "id": 2,
+    "category": "Birds",
+    "name": "Crow",
+    "image": "/img/animals/cow.png",
+    "sound": "/sounds/animalSounds/lionSound.mp3"
+  },
+  {
+    "id": 3,
+    "category": "Birds",
+    "name": "Peacock",
+    "image": "/img/animals/cow.png"
+  },
+  {
+    "id": 4,
+    "category": "Animals",
+    "name": "Cow",
+    "image": "/img/animals/cow.png"
+  },
+  {
+    "id": 5,
+    "category": "Animals",
+    "name": "Sheep",
+    "image": "/img/animals/sheep.png",
+    "sound": "/sounds/animalSounds/sheepSound.mp3",
+    "pronunciation": "/sounds/pronunciations/sheepPronunciation.mp3"
+  },
+  {
+    "id": 6,
+    "category": "Animals",
+    "name": "Frog",
+    "image": "/img/animals/frog.png"
+  },
+  {
+    "id": 7,
+    "category": "Animals",
+    "name": "Horse",
+    "image": "/img/animals/horse.png"
+  },
+  {
+    "id": 8,
+    "category": "Birds",
+    "name": "ghi",
+    "image": "/img/animals/cow.png"
+  },
+  {
+    "id": 9,
+    "category": "Birds",
+    "name": "def",
+    "image": "/img/animals/cow.png"
+  },
+  {
+    "id": 10,
+    "category": "Birds",
+    "name": "abc",
+    "image": "/img/animals/cow.png"
+  },
+  {
+    "id": 11,
+    "category": "General",
+    "name": "Cow",
+    "image": "/img/animals/cow.png",
+    "sound": "/sounds/animalSounds/lionSound.mp3"
+  },
+  {
+    "id": 12,
+    "category": "General",
+    "name": "",
+    "image": ""
+  },
+  {
+    "id": 13,
+    "category": "General",
+    "name": "",
+    "image": ""
+  },
+  {
+    "id": 14,
+    "category": "Animals",
+    "name": "Dog",
+    "image": "/img/animals/dog.png",
+    "sound": "/sounds/animalSounds/dogSound.mp3"
+  }
+]

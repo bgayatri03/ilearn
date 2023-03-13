@@ -13,6 +13,7 @@ const LearningCategories = () => {
 
   let categoryId;
   const handleCategory = (e) => {
+    console.log("e.currentTarget.id ---> ", e.currentTarget.id);
     categoryId = e.currentTarget.id;
     setCategoryName(categoryId);
     console.log("categoryId ---> ", categoryId);

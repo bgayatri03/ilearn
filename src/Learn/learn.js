@@ -1,88 +1,215 @@
 import React from "react";
 import "../Styles/learn.css";
-import lionImg from "../Images/animals/lion.png";
-import horseImg from "../Images/animals/horse.png";
-import dogImg from "../Images/animals/dog.png";
-import catImg from "../Images/animals/cat.png";
-import cowImg from "../Images/animals/cow.png";
-import elephantImg from "../Images/animals/elephant.png";
-import sheepImg from "../Images/animals/sheep.png";
-import frogImg from "../Images/animals/frog.png";
+import myData from "../myData.json";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
+import SlowMotionVideoIcon from "@mui/icons-material/SlowMotionVideo";
 
 const Learn = (props) => {
-  console.log("myCategory   ", props);
-  let lionAudio = new Audio("/lion-roar-6011.mp3");
-  const playLion = () => {
-    lionAudio.play();
+  // console.log("myCategory   ", props.category);
+  // console.log("myData", myData);
+
+  let animalArray = [];
+  let birdArray = [];
+  let generalArray = [];
+  myData.forEach((item) => {
+    // console.log("In for each", item, index);
+    if (props.category === "idAnimalCard" && item.category === "Animals") {
+      animalArray.push(item);
+    } else if (props.category === "idBirdCard" && item.category === "Birds") {
+      birdArray.push(item);
+    } else if (
+      props.category === "idGeneralCard" &&
+      item.category === "General"
+    ) {
+      generalArray.push(item);
+    }
+  });
+  // console.log("animalArray --- ", animalArray);
+  // console.log("birdArray --- ", birdArray);
+  // console.log("generalArray --- ", generalArray);
+
+  const playSoundAnimal = (e) => {
+    const clickedId = e.currentTarget.id;
+    console.log("clickedId --- ", clickedId);
+    let mySoundTrack;
+    animalArray.forEach((item) => {
+      if (clickedId === item.name) {
+        mySoundTrack = item.sound;
+      }
+    });
+    // console.log("mySoundTrack", mySoundTrack);
+    let soundToPlay = new Audio(mySoundTrack);
+    soundToPlay.play();
   };
 
-  let dogAudio = new Audio("/dog_barking-6296.mp3");
-  const playDog = () => {
-    dogAudio.play();
+  const playSoundBird = (e) => {
+    const clickedId = e.currentTarget.id;
+    // console.log("clickedId --- ", clickedId);
+    let mySoundTrack;
+    birdArray.forEach((item) => {
+      if (clickedId === item.name) {
+        mySoundTrack = item.sound;
+      }
+    });
+    // console.log("mySoundTrack", mySoundTrack);
+    let soundToPlay = new Audio(mySoundTrack);
+    soundToPlay.play();
   };
+
+  const playSoundGeneral = (e) => {
+    const clickedId = e.currentTarget.id;
+    // console.log("clickedId --- ", clickedId);
+    let mySoundTrack;
+    generalArray.forEach((item) => {
+      if (clickedId === item.name) {
+        mySoundTrack = item.sound;
+      }
+    });
+    // console.log("mySoundTrack", mySoundTrack);
+    let soundToPlay = new Audio(mySoundTrack);
+    soundToPlay.play();
+  };
+
+  const pronunciationHandler = (e) => {
+    const clickedPronunciation = e.currentTarget.id;
+    let myPronunciation;
+    myData.forEach((pro) => {
+      if (clickedPronunciation === pro.name) {
+        myPronunciation = pro.pronunciation;
+      }
+    });
+    let pronunciationToPlay = new Audio(myPronunciation);
+    pronunciationToPlay.play();
+  };
+  const slowSpeedHandler = (e) => {
+    const clickedSlowSound = e.currentTarget.id;
+    let mySlowSound;
+    myData.forEach((pro) => {
+      if (clickedSlowSound === pro.name) {
+        mySlowSound = pro.pronunciation;
+      }
+    });
+    let slowSound = new Audio(mySlowSound);
+    slowSound.playbackRate = 0.5;
+    slowSound.play();
+  };
+
   return (
     <div className="mainCat">
       <div className="wrapCat">
-        {props.category === "idAnimalCard" && (
+        {animalArray.length > 0 && (
           <div className="animalCardsWrap">
-            <div className="specificCategoryCards lionCard" onClick={playLion}>
-              <img className="animalImg" src={lionImg} alt=""></img>
-            </div>
-            <div className="specificCategoryCards horseCard">
-              <img className="animalImg" src={horseImg} alt=""></img>
-            </div>
-            <div className="specificCategoryCards dogCard" onClick={playDog}>
-              <img className="animalImg" src={dogImg} alt=""></img>
-            </div>
-            <div className="specificCategoryCards catCard">
-              <img className="animalImg" src={catImg} alt=""></img>
-            </div>
-            <div className="specificCategoryCards cowCard">
-              <img className="animalImg" src={cowImg} alt=""></img>
-            </div>
-            <div className="specificCategoryCards elephantCard">
-              <img className="animalImg" src={elephantImg} alt=""></img>
-            </div>
-            <div className="specificCategoryCards frogCard">
-              <img className="animalImg" src={frogImg} alt=""></img>
-            </div>
-            <div className="specificCategoryCards sheepCard">
-              <img className="animalImg" src={sheepImg} alt=""></img>
-            </div>
+            {animalArray.map((animal, index) => (
+              <div key={index} className="wrapCardSound">
+                <div
+                  id={animal.name}
+                  className="specificCategoryCards"
+                  onClick={playSoundAnimal}
+                >
+                  <img
+                    className="imagesStyle"
+                    src={animalArray[index].image}
+                    alt=""
+                  ></img>
+                </div>
+                <div className="buttonsContainer">
+                  <button
+                    id={animal.name}
+                    className="pronunciationButton"
+                    onClick={pronunciationHandler}
+                  >
+                    <VolumeUpIcon style={{ fontSize: 29, color: "#fff" }} />
+                  </button>
+                  <button
+                    id={animal.name}
+                    className="slowButton"
+                    onClick={slowSpeedHandler}
+                  >
+                    <SlowMotionVideoIcon
+                      style={{ fontSize: 29, color: "#fff" }}
+                    />
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         )}
 
-        {props.category === "idBirdCard" && (
-          <div className="birdCardsWrap">
-            <div className="specificCategoryCards cowCard">
-              <img className="animalImg" alt=""></img>
-            </div>
-            <div className="specificCategoryCards elephantCard">
-              <img className="animalImg" alt=""></img>
-            </div>
-            <div className="specificCategoryCards frogCard">
-              <img className="animalImg" alt=""></img>
-            </div>
-            <div className="specificCategoryCards sheepCard">
-              <img className="animalImg" alt=""></img>
-            </div>
+        {birdArray.length > 0 && (
+          <div className="animalCardsWrap">
+            {birdArray.map((bird, index) => (
+              <div key={index} className="wrapCardSound">
+                <div
+                  id={bird.name}
+                  key={index}
+                  className="specificCategoryCards"
+                  onClick={playSoundBird}
+                >
+                  <img
+                    className="imagesStyle"
+                    src={birdArray[index].image}
+                    alt=""
+                  ></img>
+                </div>
+                <div className="buttonsContainer">
+                  <button
+                    id={bird.name}
+                    className="pronunciationButton"
+                    onClick={pronunciationHandler}
+                  >
+                    <VolumeUpIcon style={{ fontSize: 29, color: "#fff" }} />
+                  </button>
+                  <button
+                    id={bird.name}
+                    className="slowButton"
+                    onClick={slowSpeedHandler}
+                  >
+                    <SlowMotionVideoIcon
+                      style={{ fontSize: 29, color: "#fff" }}
+                    />
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         )}
 
-        {props.category === "idGeneralCard" && (
-          <div className="generalCardWrap">
-            <div className="specificCategoryCards cowCard">
-              <img className="animalImg" alt=""></img>
-            </div>
-            <div className="specificCategoryCards elephantCard">
-              <img className="animalImg" alt=""></img>
-            </div>
-            <div className="specificCategoryCards frogCard">
-              <img className="animalImg" alt=""></img>
-            </div>
-            <div className="specificCategoryCards sheepCard">
-              <img className="animalImg" alt=""></img>
-            </div>
+        {generalArray.length > 0 && (
+          <div className="animalCardsWrap">
+            {generalArray.map((general, index) => (
+              <div key={index} className="wrapCardSound">
+                <div
+                  id={general.name}
+                  key={index}
+                  className="specificCategoryCards"
+                  onClick={playSoundGeneral}
+                >
+                  <img
+                    className="imagesStyle"
+                    src={generalArray[index].image}
+                    alt=""
+                  ></img>
+                </div>
+                <div className="buttonsContainer">
+                  <button
+                    id={general.name}
+                    className="pronunciationButton"
+                    onClick={pronunciationHandler}
+                  >
+                    <VolumeUpIcon style={{ fontSize: 29, color: "#fff" }} />
+                  </button>
+                  <button
+                    id={general.name}
+                    className="slowButton"
+                    onClick={slowSpeedHandler}
+                  >
+                    <SlowMotionVideoIcon
+                      style={{ fontSize: 29, color: "#fff" }}
+                    />
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         )}
       </div>
