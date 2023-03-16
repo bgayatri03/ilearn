@@ -1,5 +1,5 @@
 import { mount } from "enzyme";
-import { MemoryRouter } from "react-router-dom";
+//import { MemoryRouter } from "react-router-dom";
 import App from "./App";
 
 describe("App Component", () => {

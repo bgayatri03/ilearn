@@ -19,7 +19,7 @@
     "react-dropdown": "^1.11.0",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
-    "swiper": "^9.1.0",
+    "swiper": "^9.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -50,5 +50,17 @@
     "@cfaester/enzyme-adapter-react-18": "^0.7.0",
     "enzyme": "^3.11.0",
     "jest": "^27.5.1"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)"
+    ],
+    "moduleNameMapper": {
+      "swiper/css": "swiper/swiper.min.css",
+      "swiper/css/pagination": "swiper/modules/pagination/pagination.min.css",
+      "swiper/css/navigation": "swiper/modules/navigation/navigation.min.css",
+      "Swiper": "swiper/react/swiper-react.js",
+      "SwiperSlide": "swiper/react/swiper-slide.js"
+    }
   }
 }
