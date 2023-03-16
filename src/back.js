@@ -1,11 +1,11 @@
 import React from "react";
-import "./Styles/bottomBar.css";
+import "./Styles/back.css";
 import { Button } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-const BottomBar = (props) => {
+const Back = (props) => {
   return (
-    <div className="bottomBar">
+    <div className="backStyle">
       <div className="backButtonClass">
         <Button onClick={props.updateShowCategories}>
           <ArrowBackIcon sx={{ color: "black" }} fontSize="large" />
@@ -15,4 +15,4 @@ const BottomBar = (props) => {
   );
 };
 
-export default BottomBar;
+export default Back;

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "../Styles/learningCategories.css";
 import Navbar from "../Navbar";
-import BottomBar from "../bottomBar";
+import Back from "../back";
 import animalCat from "../Images/animal_category.png";
 import birdCat from "../Images/bird_category.png";
 import generalCat from "../Images/general_category.png";
@@ -27,9 +27,7 @@ const LearningCategories = () => {
   return (
     <div className="mainWrapper">
       <Navbar />
-      {!showCategories && (
-        <BottomBar updateShowCategories={updateShowCategories} />
-      )}
+      {!showCategories && <Back updateShowCategories={updateShowCategories} />}
       <div className="selectCategorywrap">
         {showCategories && (
           <div className="wrap">
