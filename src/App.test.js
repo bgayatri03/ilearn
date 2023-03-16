@@ -5,14 +5,15 @@ import App from "./App";
 describe("App Component", () => {
   let wrapper = null;
   const component = (path) => {
-    return mount(
-      <MemoryRouter initialEntries={[`${path}`]}>
-        <App />
-      </MemoryRouter>
-    );
+    return mount(<App />);
   };
 
   beforeEach(() => {
     wrapper = component();
+  });
+
+  it("is Rendered", () => {
+    const app = wrapper.find({ "data-testid": "App" });
+    expect(app.length).toBe(1);
   });
 });
