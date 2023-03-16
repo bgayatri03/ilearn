@@ -13,6 +13,9 @@ const HomePage = () => {
     const learn = () => {
         window.location.pathname = '/learningCategories';
     }
+    const test = () => {
+        window.location.pathname = '/test';
+    }
 
     return (  
         <div className='container'> 
@@ -33,7 +36,7 @@ const HomePage = () => {
             </div>
                 
             <div className="col-md-3">
-                <div className="card card-3">
+                <div className="card card-3" onClick={test}>
                     <img className='featureImg' src={testImg} alt=''></img>    
                     <h3> Test </h3>
                 </div>

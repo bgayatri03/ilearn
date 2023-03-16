@@ -1,23 +1,22 @@
 import React, { useState } from "react";
-import './Styles/SnakesAndLaddersGame.css'
-import SnakesAndLaddersGridWithRamda from './SnakesAndLadders/SnakesAndLaddersGridWithRamda'
-import SnakeLadderBoardImage from './Images/SnakeLadders540-540.jpg'
-import { Modal, Typography } from "@mui/material";
+import './Styles/SnakesAndLaddersGameNew.css'
+import { Modal } from "@mui/material";
 import { Box } from "@mui/system"
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
-import dogImg from "./Images/animals/dog.png";
-import Hurray from "./Images/hurray.gif";
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import SlowMotionVideoIcon from '@mui/icons-material/SlowMotionVideo';
 import mySoundData from './subGame.json'
+import SnakesAndLaddersGridWithRamda from "./SnakesAndLadders/SnakesAndLaddersGridWithRamda";
+import Hurray from './Images/party.gif'
 
-const SnakesAndLadders = props => {
+const SnakesAndLaddersGameNew = (props) => {
     const myPosition = props.currentPlace
     const modalState = props.modalState
     const checkboxesValues = props.checkBoxValues
 
     const [score, setScore] = useState(0)
     const [questionsAsked, setQuestionsAsked] = useState(0)
+    const [showGameOver, setShowGameOver] = useState(false)
     let checkboxes=[];
     if(props.level == 'basic'){
         for(let i=0; i<checkboxesValues.length; i++){
@@ -103,13 +102,18 @@ const SnakesAndLadders = props => {
     const changeTokenPosition = (dice) => {
         console.log("dice in change", dice)
         if(myPosition + dice >= 100){
-            alert('Game Over!')
+            setShowGameOver(true)
+            // alert('Game Over!')
             console.log("No. of questions asked...", questionsAsked)
             console.log("Correctly answered...", score)
         }
         else{
             props.changePosition(myPosition + dice)
         }
+    }
+
+    const changeGameOverModalShow = () => {
+        setShowGameOver(false)
     }
 
     const checkAnswer = (e) => {
@@ -138,10 +142,9 @@ const SnakesAndLadders = props => {
         }
     }
     return (
-        <div className="mainDiv">
-            <div className="diceAndBoardContainer">
-                <div className="diceContainer">
-                    <div id='dice1' className={`diceStyle dice-style-one  showSide-${myNum}`}>
+        <div className="snakesAndLaddersGameContainer">
+        <div className="diceContainer">
+        <div id='dice1' className={`diceStyle dice-style-one  showSide-${myNum}`}>
                         <div id='dice-one-side-one' className='diceSide one'>
                             <div className='dots one-1'></div>
                         </div>
@@ -177,18 +180,16 @@ const SnakesAndLadders = props => {
                         </div>
                     </div>
                     <button id="rollButton" onClick={rollDice}>Roll Dice</button>
-                </div>
+        </div>
+        <div className="snakesAndLaddersBoardContainer">
+            <div className="gridOuterSquare snakesAndLaddersBoardImage">
+            <SnakesAndLaddersGridWithRamda myPosition={myPosition}/>
+            </div>
+        </div>
 
-                <div className="board boardImage">
-                <SnakesAndLaddersGridWithRamda myPosition={myPosition}/>
-                </div>
-                {/* <img id="gameBoardImage" className="shadow" src={SnakeLadderBoardImage} alt=""></img> */}
-
-
-
-                {modalState && 
+        {modalState && 
                     <Modal open={modalState} onClose={props.changeModalState}>
-                        <Box className="modal-box">
+                        <Box className="modal-box-game">
                             <div className="modalContentContainer">
                                 <div className="instructionContainer">
                                     <span className="instructionText">Identify the category</span>
@@ -226,9 +227,19 @@ const SnakesAndLadders = props => {
                         </Box>
                     </Modal>
                 }
-            </div>
-        </div>
+
+        {showGameOver &&
+                    <Modal open={showGameOver} onClose={changeGameOverModalShow}>
+                        <Box className="modal-box">
+                            <h1 className='hurrayStyle'>Hurrayy!</h1>
+                            <h2 className='yourScoreStyle'>Your score is {score}/{questionsAsked}</h2>
+                            <img className='gifStyle' src={Hurray}/>
+                        </Box>
+                    </Modal>
+                }
+    </div>
     );
+    
 }
 
-export default SnakesAndLadders
+export default SnakesAndLaddersGameNew

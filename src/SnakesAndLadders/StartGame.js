@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SnakesAndLadders from "../SnakesAndLaddersGame";
+import SnakesAndLaddersGameNew from "../SnakesAndLaddersGameNew";
 import { Radio } from "@mui/material";
 import { Checkbox } from '@mui/material';
 import { allSnakesBoxes, allLaddersBoxes } from "./SnakeLadderPositions";
@@ -157,9 +158,11 @@ const StartGame = () => {
                     </div>
                 </div>
             }
-            {hideThemeScreen && <SnakesAndLadders currentPlace={currentPosition} changePosition={updatePosition} changeModalState={updateModalState} modalState={showModal} checkBoxValues={checkedState} level={selectedLevel} snakeOrLadderPosition={snakeOrLadderPosition} updatePositionAfterSnakeOrLadder={updatePositionAfterSnakeOrLadder}/>}
+            {/* {hideThemeScreen && <SnakesAndLadders currentPlace={currentPosition} changePosition={updatePosition} changeModalState={updateModalState} modalState={showModal} checkBoxValues={checkedState} level={selectedLevel} snakeOrLadderPosition={snakeOrLadderPosition} updatePositionAfterSnakeOrLadder={updatePositionAfterSnakeOrLadder}/>} */}
+            
+            {hideThemeScreen && <SnakesAndLaddersGameNew currentPlace={currentPosition} changePosition={updatePosition} changeModalState={updateModalState} modalState={showModal} checkBoxValues={checkedState} level={selectedLevel} snakeOrLadderPosition={snakeOrLadderPosition} updatePositionAfterSnakeOrLadder={updatePositionAfterSnakeOrLadder}/>}
         </div>
     );
 }
-
+// SnakesAndLaddersGameNew
 export default StartGame

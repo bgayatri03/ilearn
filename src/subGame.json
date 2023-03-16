@@ -1,29 +1,99 @@
 [
     {
         "id": 1,
-        "path": "/lion.mp3",
+        "path": "/sounds/animalSounds/lionSound.mp3",
         "name": "Lion",
         "answer": "Animals",
         "category": "Animals"
     },
     {
         "id": 2,
-        "path": "/dog.mp3",
+        "path": "/sounds/animalSounds/dogSound.mp3",
         "name": "Dog",
         "answer": "Animals",
         "category": "Animals"
     },
     {
         "id": 3,
-        "path": "/dog.mp3",
+        "path": "/sounds/animalSounds/catSound.mp3",
+        "name": "Cat",
+        "answer": "Animals",
+        "category": "Animals"
+    },
+    {
+        "id": 4,
+        "path": "/sounds/animalSounds/cowSound.mp3",
+        "name": "Cow",
+        "answer": "Animals",
+        "category": "Animals"
+    },
+    {
+        "id": 5,
+        "path": "/sounds/animalSounds/horseSound.mp3",
+        "name": "Horse",
+        "answer": "Animals",
+        "category": "Animals"
+    },
+    {
+        "id": 6,
+        "path": "/sounds/animalSounds/sheepSound.mp3",
+        "name": "Sheep",
+        "answer": "Animals",
+        "category": "Animals"
+    },
+    {
+        "id": 7,
+        "path": "/sounds/animalSounds/frogSound.mp3",
+        "name": "Frog",
+        "answer": "Animals",
+        "category": "Animals"
+    },
+    {
+        "id": 8,
+        "path": "/sounds/birdSounds/crowSound.mp3",
         "name": "Crow",
         "answer": "Birds",
         "category": "Birds"
     },
     {
-        "id": 4,
-        "path": "/lion.mp3",
-        "name": "Airoplane",
+        "id": 9,
+        "path": "/sounds/birdSounds/duckSound.mp3",
+        "name": "Duck",
+        "answer": "Birds",
+        "category": "Birds"
+    },
+    {
+        "id": 10,
+        "path": "/sounds/birdSounds/roosterSound.mp3",
+        "name": "Rooster",
+        "answer": "Birds",
+        "category": "Birds"
+    },
+    {
+        "id": 11,
+        "path": "/sounds/birdSounds/owlSound.mp3",
+        "name": "Owl",
+        "answer": "Birds",
+        "category": "Birds"
+    },
+    {
+        "id": 12,
+        "path": "/sounds/generalSounds/carHornSound.mp3",
+        "name": "Horn",
+        "answer": "General",
+        "category": "General"
+    },
+    {
+        "id": 13,
+        "path": "/sounds/generalSounds/shotgunSound.mp3",
+        "name": "BulletShot",
+        "answer": "General",
+        "category": "General"
+    },
+    {
+        "id": 14,
+        "path": "/sounds/generalSounds/trainSound.mp3",
+        "name": "Train",
         "answer": "General",
         "category": "General"
     }

@@ -19,7 +19,7 @@ const SnakesAndLaddersGridWithRamda = props => {
                                         {myPosition === box && <div className="game-token"/>}
                                         
                                         </div>
-                                        <div style={{ fontSize: "10px",opacity: 0 }}>{box}</div>
+                                        <div style={{ fontSize: "10px", opacity: 0}}>{box}</div>
                                     </div>
                                 </span>
                             </div>
