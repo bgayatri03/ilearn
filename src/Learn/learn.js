@@ -24,9 +24,6 @@ const Learn = (props) => {
       generalArray.push(item);
     }
   });
-  // console.log("animalArray --- ", animalArray);
-  // console.log("birdArray --- ", birdArray);
-  // console.log("generalArray --- ", generalArray);
 
   const playSoundAnimal = (e) => {
     const clickedId = e.currentTarget.id;
@@ -37,7 +34,6 @@ const Learn = (props) => {
         mySoundTrack = item.sound;
       }
     });
-    // console.log("mySoundTrack", mySoundTrack);
     let soundToPlay = new Audio(mySoundTrack);
     soundToPlay.play();
   };
@@ -51,21 +47,18 @@ const Learn = (props) => {
         mySoundTrack = item.sound;
       }
     });
-    // console.log("mySoundTrack", mySoundTrack);
     let soundToPlay = new Audio(mySoundTrack);
     soundToPlay.play();
   };
 
   const playSoundGeneral = (e) => {
     const clickedId = e.currentTarget.id;
-    // console.log("clickedId --- ", clickedId);
     let mySoundTrack;
     generalArray.forEach((item) => {
       if (clickedId === item.name) {
         mySoundTrack = item.sound;
       }
     });
-    // console.log("mySoundTrack", mySoundTrack);
     let soundToPlay = new Audio(mySoundTrack);
     soundToPlay.play();
   };
@@ -84,9 +77,9 @@ const Learn = (props) => {
   const slowSpeedHandler = (e) => {
     const clickedSlowSound = e.currentTarget.id;
     let mySlowSound;
-    myData.forEach((pro) => {
-      if (clickedSlowSound === pro.name) {
-        mySlowSound = pro.pronunciation;
+    myData.forEach((sound) => {
+      if (clickedSlowSound === sound.name) {
+        mySlowSound = sound.pronunciation;
       }
     });
     let slowSound = new Audio(mySlowSound);

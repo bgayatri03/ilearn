@@ -2,14 +2,14 @@
 
 .navigationBar{
     background: #D9FF8D;
-    height: 50px;
+    height: 8%;
     width: 100%;
     display: flex;
     justify-content: left;
     align-items: center;
 }
 .Title{
-    height: 100px;
+    height: 8%;
     width: 90%;
     display: flex;
     justify-content: flex-start;

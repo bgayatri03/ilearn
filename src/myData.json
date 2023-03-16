@@ -11,20 +11,25 @@
     "id": 2,
     "category": "Birds",
     "name": "Crow",
-    "image": "/img/animals/cow.png",
-    "sound": "/sounds/animalSounds/lionSound.mp3"
+    "image": "/img/birds/crow.png",
+    "sound": "/sounds/birdSounds/crowSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
   },
   {
     "id": 3,
     "category": "Birds",
     "name": "Peacock",
-    "image": "/img/animals/cow.png"
+    "image": "/img/birds/peacock.png",
+    "sound": "/sounds/birdSounds/peacockSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
   },
   {
     "id": 4,
     "category": "Animals",
     "name": "Cow",
-    "image": "/img/animals/cow.png"
+    "image": "/img/animals/cow.png",
+    "sound": "/sounds/animalSounds/cowSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
   },
   {
     "id": 5,
@@ -38,56 +43,112 @@
     "id": 6,
     "category": "Animals",
     "name": "Frog",
-    "image": "/img/animals/frog.png"
+    "image": "/img/animals/frog.png",
+    "sound": "/sounds/animalSounds/frogSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
   },
   {
     "id": 7,
     "category": "Animals",
     "name": "Horse",
-    "image": "/img/animals/horse.png"
+    "image": "/img/animals/horse.png",
+    "sound": "/sounds/animalSounds/horseSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
   },
   {
     "id": 8,
     "category": "Birds",
-    "name": "ghi",
-    "image": "/img/animals/cow.png"
+    "name": "Duck",
+    "image": "/img/birds/duck.png",
+    "sound": "/sounds/birdSounds/duckSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
   },
   {
     "id": 9,
     "category": "Birds",
-    "name": "def",
-    "image": "/img/animals/cow.png"
+    "name": "Owl",
+    "image": "/img/birds/owl.png",
+    "sound": "/sounds/birdSounds/owlSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
   },
   {
     "id": 10,
     "category": "Birds",
-    "name": "abc",
-    "image": "/img/animals/cow.png"
+    "name": "Rooster",
+    "image": "/img/birds/rooster.png",
+    "sound": "/sounds/birdSounds/roosterSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
   },
   {
     "id": 11,
     "category": "General",
-    "name": "Cow",
-    "image": "/img/animals/cow.png",
-    "sound": "/sounds/animalSounds/lionSound.mp3"
+    "name": "Horn",
+    "image": "/img/general/carHorn.png",
+    "sound": "/sounds/generalSounds/carHornSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
   },
   {
     "id": 12,
     "category": "General",
-    "name": "",
-    "image": ""
+    "name": "Gun",
+    "image": "/img/general/gun.png",
+    "sound": "/sounds/generalSounds/shotgunSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
   },
   {
     "id": 13,
     "category": "General",
-    "name": "",
-    "image": ""
+    "name": "Helicopter",
+    "image": "/img/general/helicopter.png",
+    "sound": "/sounds/generalSounds/helicopterSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
   },
   {
     "id": 14,
     "category": "Animals",
     "name": "Dog",
     "image": "/img/animals/dog.png",
-    "sound": "/sounds/animalSounds/dogSound.mp3"
+    "sound": "/sounds/animalSounds/dogSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
+  },
+  {
+    "id": 15,
+    "category": "General",
+    "name": "oceanWaves",
+    "image": "/img/general/oceanWaves.png",
+    "sound": "/sounds/generalSounds/oceanWavesSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
+  },
+  {
+    "id": 16,
+    "category": "General",
+    "name": "Thunder",
+    "image": "/img/general/thunder.png",
+    "sound": "/sounds/generalSounds/thunderSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
+  },
+  {
+    "id": 17,
+    "category": "General",
+    "name": "Train",
+    "image": "/img/general/train.png",
+    "sound": "/sounds/generalSounds/trainSound.mp3",
+    "pronunciation": "/sounds/pronunciations/.mp3"
+  },
+  {
+    "id": 18,
+    "category": "Animals",
+    "name": "Elephant",
+    "image": "/img/animals/elephant.png",
+    "sound": "/sounds/animalSounds/elephantSound.mp3",
+    "pronunciation": "/sounds/pronunciations/elephantPronunciation.mp3"
+  },
+  {
+    "id": 19,
+    "category": "Animals",
+    "name": "Cat",
+    "image": "/img/animals/cat.png",
+    "sound": "/sounds/animalSounds/catSound.mp3",
+    "pronunciation": "/sounds/pronunciations/catPronunciation.mp3"
   }
 ]

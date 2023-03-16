@@ -1,0 +1,17 @@
+.bottomBar{
+    /* background: #D9FF8D; */
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* margin-top: 150px; */
+
+}
+.backButtonClass{
+    height: 100px;
+    width: 100%;
+    display: flex;  
+    justify-content: flex-start;
+    align-items: center;
+}
