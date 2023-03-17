@@ -12,12 +12,9 @@ ChartJs.register(Tooltip, Title, ArcElement, Legend);
 const Dashboard = () => {
   const filters = ["daily", "all time"];
   const [defaultFilter, setDefaultFilter] = useState("Filter");
-  // const [selected, setSelected] = useState("");
 
   //test-->
   let todaysDate = new Date().toLocaleDateString();
-  // let currentMonth = new Date().getMonth();
-  // let currentYear = new Date().getFullYear();
   let correctArray = [];
   let wrongArray = [];
   let skippedArray = [];
@@ -40,38 +37,6 @@ const Dashboard = () => {
         }
       }
     }
-
-    // if (defaultFilter.value === "monthly") {
-    //   if (item.correct) {
-    //     console.log("item.Date.getMonth --> ", item.Date.getMonth);
-    //     console.log("item.Date.getFullYear --> ", item.Date.getFullYear);
-
-    //     if (
-    //       item.Date.getMonth === currentMonth &&
-    //       item.Date.getFullYear === currentYear
-    //     ) {
-    //       console.log("item.Date.getMonth --> ", item.Date.getMonth);
-    //       console.log("item.Date.getFullYear --> ", item.Date.getFullYear);
-    //       correctArray.push(item.correct);
-    //     }
-    //   }
-    //   if (item.wrong) {
-    //     if (
-    //       item.Date.getMonth === currentMonth &&
-    //       item.Date.getFullYear === currentYear
-    //     ) {
-    //       wrongArray.push(item.wrong);
-    //     }
-    //   }
-    //   if (item.skipped) {
-    //     if (
-    //       item.Date.getMonth === currentMonth &&
-    //       item.Date.getFullYear === currentYear
-    //     ) {
-    //       skippedArray.push(item.skipped);
-    //     }
-    //   }
-    // }
 
     if (defaultFilter.value === "all time") {
       if (item.correct) {
@@ -257,38 +222,6 @@ const Dashboard = () => {
           <h3 className="gameCaption">Game Insights</h3>
         </div>
       )}
-
-      {/* {defaultFilter.value === "monthly" && (
-        <div className="chartContainer">
-          <div className="pieStyle">
-            <Pie data={myData} />
-          </div>
-          <div className="doughnutStyle">
-            <Doughnut
-              data={myGameDataCorrect}
-              options={{
-                rotation: -90,
-                circumference: 180,
-                cutout: "60%",
-                maintainAspectRatio: true,
-                responsive: true,
-              }}
-            />
-            <Doughnut
-              data={myGameDataWrong}
-              options={{
-                rotation: -90,
-                circumference: 180,
-                cutout: "60%",
-                maintainAspectRatio: true,
-                responsive: true,
-              }}
-            />
-          </div>
-          <h3 className="testCaption">Test Insights</h3>
-          <h3 className="gameCaption">Game Insights</h3>
-        </div>
-      )} */}
     </div>
   );
 };

@@ -37,4 +37,17 @@ describe("StartGame Component", () => {
     wrapper.find("button").simulate("click");
     expect(initGame).toBeCalled();
   });
+
+  it("blah blah", () => {
+    const initProp = {
+      currentPlace: 0,
+      changePosition: jest.fn(),
+      changeModalState: jest.fn(),
+      modalState: false,
+      checkBoxValues: [false, false, false],
+      level: "",
+      snakeOrLadderPosition: 0,
+      updatePositionAfterSnakeOrLadder: jest.fn(),
+    };
+  });
 });
