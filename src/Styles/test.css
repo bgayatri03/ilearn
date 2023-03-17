@@ -45,12 +45,21 @@
 
 .questionImageCard{
     height: 35%;
-    width: 13%;
+    width: 16%;
     background-color: aquamarine;
     box-shadow: 1px 3px #bbbdb9;
     border-radius: 8px;
     margin-top: 30px;
 }
+
+.backCard{
+    height: 99%;
+    width: 72%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1ffd5;
+}    
 
 .questionImage{
     height: 80%;
@@ -60,7 +69,7 @@
 
 .optionsDiv {
     display: flex;
-    width: 80%;
+    width: 90%;
     height: 30%;
     /* background-color: rgb(255, 182, 233); */
     margin-top: 40px;
@@ -83,7 +92,7 @@
 
 .singleOptionCard {
     height: 40%;
-    width: 31%;
+    width: 37%;
     /* background-color: cadetblue; */
     background-image: linear-gradient(to bottom right, #117984, #72d4df);
     border-radius: 5px;

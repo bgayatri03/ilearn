@@ -3,10 +3,10 @@ import QuestionsData from "./Questions.json";
 import "../Styles/test.css";
 import Navbar from "../Navbar";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import { none } from "ramda";
 import { Modal } from "@mui/material";
@@ -290,6 +290,7 @@ const Test = () => {
         >
           {QuestionsData.map((item, index) => (
             <SwiperSlide key={index} className="questionSlide">
+              <div className="backCard">
               <h2>Question {QuestionsData[index].id}</h2>
               <div className="questionImageCard">
                 <img
@@ -408,6 +409,7 @@ const Test = () => {
               ) : (
                 none
               )}
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
