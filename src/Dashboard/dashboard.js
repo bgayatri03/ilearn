@@ -161,64 +161,77 @@ const Dashboard = () => {
       {defaultFilter.value === "all time" && (
         <div className="chartContainer">
           <div className="pieStyle">
-            <Pie data={myData} />
+            <h3 className="testCaption">Test Insights</h3>
+            <Pie data={myData} options={{ radius: "40%" }} />
           </div>
           <div className="doughnutStyle">
-            <Doughnut
-              data={myGameDataCorrect}
-              options={{
-                rotation: -90,
-                circumference: 180,
-                cutout: "60%",
-                maintainAspectRatio: true,
-                responsive: true,
-              }}
-            />
-            <Doughnut
-              data={myGameDataWrong}
-              options={{
-                rotation: -90,
-                circumference: 180,
-                cutout: "60%",
-                maintainAspectRatio: true,
-                responsive: true,
-              }}
-            />
+            <h3 className="gameCaption">Game Insights</h3>
+            <div className="doughClass">
+              <Doughnut
+                data={myGameDataCorrect}
+                options={{
+                  radius: "80%",
+                  rotation: -90,
+                  circumference: 180,
+                  cutout: "60%",
+                  maintainAspectRatio: true,
+                  responsive: true,
+                }}
+              />
+            </div>
+
+            <div className="doughClass">
+              <Doughnut
+                data={myGameDataWrong}
+                options={{
+                  radius: "80%",
+                  rotation: -90,
+                  circumference: 180,
+                  cutout: "60%",
+                  maintainAspectRatio: true,
+                  responsive: true,
+                }}
+              />
+            </div>
           </div>
-          <h3 className="testCaption">Test Insights</h3>
-          <h3 className="gameCaption">Game Insights</h3>
         </div>
       )}
 
       {defaultFilter.value === "daily" && (
         <div className="chartContainer">
           <div className="pieStyle">
-            <Pie data={myData} />
+            <h3 className="testCaption">Test Insights</h3>
+            <Pie data={myData} options={{ radius: "40%" }} />
           </div>
           <div className="doughnutStyle">
-            <Doughnut
-              data={myGameDataCorrect}
-              options={{
-                rotation: -90,
-                circumference: 180,
-                cutout: "60%",
-                maintainAspectRatio: true,
-                responsive: true,
-              }}
-            />
-            <Doughnut
-              data={myGameDataWrong}
-              options={{
-                rotation: -90,
-                circumference: 180,
-                cutout: "60%",
-                maintainAspectRatio: true,
-                responsive: true,
-              }}
-            />
+            <h3 className="gameCaption">Game Insights</h3>
+            <div className="doughClass">
+              <Doughnut
+                data={myGameDataCorrect}
+                options={{
+                  radius: "80%",
+                  rotation: -90,
+                  circumference: 180,
+                  cutout: "60%",
+                  maintainAspectRatio: true,
+                  responsive: true,
+                }}
+              />
+            </div>
+            <div className="doughClass">
+              <Doughnut
+                data={myGameDataWrong}
+                options={{
+                  radius: "80%",
+                  rotation: -90,
+                  circumference: 180,
+                  cutout: "60%",
+                  maintainAspectRatio: true,
+                  responsive: true,
+                }}
+              />
+            </div>
           </div>
-          <h3 className="testCaption">Test Insights</h3>
-          <h3 className="gameCaption">Game Insights</h3>
         </div>
       )}
     </div>
