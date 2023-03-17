@@ -150,7 +150,6 @@ const Dashboard = () => {
       <Navbar />
       <div className="filterDiv">
         <Dropdown
-          className="filterDrop"
           options={filters}
           value={defaultFilter}
           selected={defaultFilter}
