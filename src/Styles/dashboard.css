@@ -23,12 +23,14 @@
     grid-area: doughnut;
 }
 .testCaption{
+    font-family: 'Comic Sans', sans-serif;
     grid-area: testCaption;
     text-align: start;
     margin-left: 10%;
     margin-top: 10%;
 }
 .gameCaption{
+    font-family: 'Comic Sans', sans-serif;
     grid-area: gameCaption;
     text-align: start;
     margin-left: 10%;

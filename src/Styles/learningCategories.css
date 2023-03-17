@@ -69,3 +69,6 @@
 .general{
     grid-area: general;
 }
+.h3fontStyle{
+    font-family: 'Comic Sans', sans-serif;
+}

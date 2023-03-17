@@ -31,7 +31,7 @@ const LearningCategories = () => {
       <div className="selectCategorywrap">
         {showCategories && (
           <div className="wrap" data-testid="showCatWrap">
-            <h3>Select Category</h3>
+            <h3 className="h3fontStyle">Select Category</h3>
             <div className="cardsWrapper">
               <div
                 id="idAnimalCard"
@@ -58,15 +58,15 @@ const LearningCategories = () => {
               </div>
 
               <div className="animals">
-                <h3>Animals</h3>
+                <h3 className="h3fontStyle">Animals</h3>
               </div>
 
               <div className="birds">
-                <h3>Birds</h3>
+                <h3 className="h3fontStyle">Birds</h3>
               </div>
 
               <div className="general">
-                <h3>General</h3>
+                <h3 className="h3fontStyle">General</h3>
               </div>
             </div>
           </div>
