@@ -88,7 +88,7 @@ const Learn = (props) => {
   };
 
   return (
-    <div className="mainCat">
+    <div className="mainCat" data-testid="learn">
       <div className="wrapCat">
         {animalArray.length > 0 && (
           <div className="animalCardsWrap">
@@ -179,6 +179,7 @@ const Learn = (props) => {
                 >
                   <img
                     className="imagesStyle"
+                    data-testid="imageCheck"
                     src={generalArray[index].image}
                     alt=""
                   ></img>
@@ -189,7 +190,13 @@ const Learn = (props) => {
                     className="pronunciationButton"
                     onClick={pronunciationHandler}
                   >
-                    <VolumeUpIcon style={{ fontSize: 29, color: "#fff" }} />
+                    <VolumeUpIcon
+                      style={{
+                        position: "relative",
+                        fontSize: 29,
+                        color: "#fff",
+                      }}
+                    />
                   </button>
                   <button
                     id={general.name}
@@ -197,7 +204,11 @@ const Learn = (props) => {
                     onClick={slowSpeedHandler}
                   >
                     <SlowMotionVideoIcon
-                      style={{ fontSize: 29, color: "#fff" }}
+                      style={{
+                        position: "relative",
+                        fontSize: 29,
+                        color: "#fff",
+                      }}
                     />
                   </button>
                 </div>

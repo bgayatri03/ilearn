@@ -45,7 +45,7 @@
     "name": "Frog",
     "image": "/img/animals/frog.png",
     "sound": "/sounds/animalSounds/frogSound.mp3",
-    "pronunciation": "/sounds/pronunciations/.mp3"
+    "pronunciation": "/sounds/pronunciations/frogPronunciation.mp3"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "name": "Horse",
     "image": "/img/animals/horse.png",
     "sound": "/sounds/animalSounds/horseSound.mp3",
-    "pronunciation": "/sounds/pronunciations/.mp3"
+    "pronunciation": "/sounds/pronunciations/horsePronunciation.mp3"
   },
   {
     "id": 8,
@@ -109,7 +109,7 @@
     "name": "Dog",
     "image": "/img/animals/dog.png",
     "sound": "/sounds/animalSounds/dogSound.mp3",
-    "pronunciation": "/sounds/pronunciations/.mp3"
+    "pronunciation": "/sounds/pronunciations/dogPronunciation.mp3"
   },
   {
     "id": 15,

@@ -1,0 +1,49 @@
+.mainDashboardDiv{
+    height: 100%;
+    width: 100%;
+}
+.chartContainer{
+    display: grid;
+    grid-template-columns: 80% 80%; 
+    grid-template-areas: 
+    "testCaption gameCaption"
+    "pie doughnut";
+    height: 80%;
+    width: 80%;
+    align-items: center;
+}
+.pieStyle{
+    height: 70%;
+    width: 35%;
+    grid-area: pie;
+}
+.doughnutStyle{
+    height: 70%;
+    width: 35%;
+    grid-area: doughnut;
+}
+.testCaption{
+    grid-area: testCaption;
+    text-align: start;
+    margin-left: 10%;
+}
+.gameCaption{
+    grid-area: gameCaption;
+    text-align: start;
+    margin-left: 10%;
+}
+.filterDiv{
+    display: flex;
+    height: 20%;
+    width: 20%;
+    justify-content: center;
+}
+.filterDrop{
+    height: 30%;
+    width: 70%;
+    text-align: center;
+}
+.submitButton{
+    height: 20%;
+    width: 20%;
+}

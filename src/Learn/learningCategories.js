@@ -25,12 +25,12 @@ const LearningCategories = () => {
   };
 
   return (
-    <div className="mainWrapper">
+    <div className="mainWrapper" data-testid="learnCategories">
       <Navbar />
       {!showCategories && <Back updateShowCategories={updateShowCategories} />}
       <div className="selectCategorywrap">
         {showCategories && (
-          <div className="wrap">
+          <div className="wrap" data-testid="showCatWrap">
             <h3>Select Category</h3>
             <div className="cardsWrapper">
               <div
