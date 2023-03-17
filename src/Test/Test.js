@@ -60,9 +60,6 @@ const Test = () => {
   const startTimer = (e) => {
     let { total, hours, minutes, seconds } = remainingTime(e);
     if (total >= 0) {
-      // update the timer
-      // check if less than 10 then we need to
-      // add '0' at the beginning of the variable
       setTimer(
         (hours > 9 ? hours : "0" + hours) +
           ":" +
@@ -74,14 +71,7 @@ const Test = () => {
   };
 
   const clearTimer = (e) => {
-    // If you adjust it you should also need to
-    // adjust the Endtime formula we are about
-    // to code next
-    setTimer("00:01:00");
-
-    // If you try to remove this line the
-    // updating of timer Variable will be
-    // after 1000ms or 1sec
+    setTimer("00:10:00");
     if (Ref.current) clearInterval(Ref.current);
     const id = setInterval(() => {
       startTimer(e);
@@ -91,10 +81,7 @@ const Test = () => {
 
   const getDeadTime = () => {
     let deadline = new Date();
-
-    // This is where you need to adjust if
-    // you entend to add more time
-    deadline.setMinutes(deadline.getMinutes() + 2);
+    deadline.setMinutes(deadline.getMinutes() + 10);
     return deadline;
   };
 
@@ -103,8 +90,6 @@ const Test = () => {
   }, []);
 
   const radioChangeHandler = (e, idSelected) => {
-    console.log("inside radio...id", idSelected);
-    console.log("e.target.value in test 1", e.target.value);
     if (idSelected == 1) {
       setSelectedSet1(e.target.value);
     } else if (idSelected == 2) {
@@ -131,16 +116,6 @@ const Test = () => {
   let correctAnswers = 0;
 
   const getAnswers = () => {
-    console.log("selectedSet1", selectedSet1, QuestionsData[0].answer);
-    console.log("selectedSet2", selectedSet2, QuestionsData[1].answer);
-    console.log("selectedSet3", selectedSet3, QuestionsData[2].answer);
-    console.log("selectedSet4", selectedSet4, QuestionsData[3].answer);
-    console.log("selectedSet5", selectedSet5, QuestionsData[4].answer);
-    console.log("selectedSet6", selectedSet6, QuestionsData[5].answer);
-    console.log("selectedSet7", selectedSet7, QuestionsData[6].answer);
-    console.log("selectedSet8", selectedSet8, QuestionsData[7].answer);
-    console.log("selectedSet9", selectedSet9, QuestionsData[8].answer);
-    console.log("selectedSet10", selectedSet10, QuestionsData[9].answer);
 
     if (QuestionsData[0].answer == selectedSet1) {
       correctAnswers = correctAnswers + 1;
@@ -173,7 +148,6 @@ const Test = () => {
       correctAnswers = correctAnswers + 1;
     }
 
-    console.log("Correctly answered out of 10...", correctAnswers);
     setScore(correctAnswers);
 
     setTimeout(() => {
@@ -186,16 +160,6 @@ const Test = () => {
   };
 
   const getAnswersWithTimeout = () => {
-    console.log("selectedSet1", selectedSet1, QuestionsData[0].answer);
-    console.log("selectedSet2", selectedSet2, QuestionsData[1].answer);
-    console.log("selectedSet3", selectedSet3, QuestionsData[2].answer);
-    console.log("selectedSet4", selectedSet4, QuestionsData[3].answer);
-    console.log("selectedSet5", selectedSet5, QuestionsData[4].answer);
-    console.log("selectedSet6", selectedSet6, QuestionsData[5].answer);
-    console.log("selectedSet7", selectedSet7, QuestionsData[6].answer);
-    console.log("selectedSet8", selectedSet8, QuestionsData[7].answer);
-    console.log("selectedSet9", selectedSet9, QuestionsData[8].answer);
-    console.log("selectedSet10", selectedSet10, QuestionsData[9].answer);
 
     if (QuestionsData[0].answer == selectedSet1) {
       correctAnswers = correctAnswers + 1;
@@ -227,8 +191,6 @@ const Test = () => {
     if (QuestionsData[9].answer == selectedSet10) {
       correctAnswers = correctAnswers + 1;
     }
-
-    console.log("Correctly answered out of 10...", correctAnswers);
     setScore(correctAnswers);
   };
 
