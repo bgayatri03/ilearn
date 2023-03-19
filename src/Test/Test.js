@@ -116,7 +116,6 @@ const Test = () => {
   let correctAnswers = 0;
 
   const getAnswers = () => {
-
     if (QuestionsData[0].answer == selectedSet1) {
       correctAnswers = correctAnswers + 1;
     }
@@ -160,7 +159,6 @@ const Test = () => {
   };
 
   const getAnswersWithTimeout = () => {
-
     if (QuestionsData[0].answer == selectedSet1) {
       correctAnswers = correctAnswers + 1;
     }
@@ -209,7 +207,6 @@ const Test = () => {
   const playSoundTrack = (e) => {
     const clickedDivId = e.currentTarget.id;
     let separatedStrings = clickedDivId.split("_");
-    console.log("clickedDivId...", separatedStrings);
     let soundTrackToBePlayed;
     QuestionsData.forEach((item) => {
       if (separatedStrings[0] == item.id && separatedStrings[1] == "audio1") {
@@ -253,124 +250,124 @@ const Test = () => {
           {QuestionsData.map((item, index) => (
             <SwiperSlide key={index} className="questionSlide">
               <div className="backCard">
-              <h2>Question {QuestionsData[index].id}</h2>
-              <div className="questionImageCard">
-                <img
-                  className="questionImage"
-                  src={QuestionsData[index].image}
-                />
-              </div>
-              <div className="optionsDiv">
-                <div className="singleRadioButtonAndCard">
-                  <input
-                    className="radioButtonInputCircle"
-                    type="radio"
-                    name="audio"
-                    checked={
-                      `selectedSet${QuestionsData[index].id}` ===
-                      QuestionsData[index].audio1_name
-                    }
-                    value={QuestionsData[index].audio1_name}
-                    onChange={(e) =>
-                      radioChangeHandler(e, QuestionsData[index].id)
-                    }
+                <h2>Question {QuestionsData[index].id}</h2>
+                <div className="questionImageCard">
+                  <img
+                    className="questionImage"
+                    src={QuestionsData[index].image}
                   />
-                  <div
-                    id={`${QuestionsData[index].id}_audio1`}
-                    className="singleOptionCard"
-                    onClick={playSoundTrack}
-                  >
-                    <VolumeUpIcon
-                      id="volumeUpIconStyle"
-                      className="volumeUpIconStyle"
+                </div>
+                <div className="optionsDiv">
+                  <div className="singleRadioButtonAndCard">
+                    <input
+                      className="radioButtonInputCircle"
+                      type="radio"
+                      name="audio"
+                      checked={
+                        `selectedSet${QuestionsData[index].id}` ===
+                        QuestionsData[index].audio1_name
+                      }
+                      value={QuestionsData[index].audio1_name}
+                      onChange={(e) =>
+                        radioChangeHandler(e, QuestionsData[index].id)
+                      }
                     />
+                    <div
+                      id={`${QuestionsData[index].id}_audio1`}
+                      className="singleOptionCard"
+                      onClick={playSoundTrack}
+                    >
+                      <VolumeUpIcon
+                        id="volumeUpIconStyle"
+                        className="volumeUpIconStyle"
+                      />
+                    </div>
+                  </div>
+                  <div className="singleRadioButtonAndCard">
+                    <input
+                      className="radioButtonInputCircle"
+                      type="radio"
+                      name="audio"
+                      checked={
+                        `selectedSet${QuestionsData[index].id}` ===
+                        QuestionsData[index].audio2_name
+                      }
+                      value={QuestionsData[index].audio2_name}
+                      onChange={(e) =>
+                        radioChangeHandler(e, QuestionsData[index].id)
+                      }
+                    />
+                    <div
+                      id={`${QuestionsData[index].id}_audio2`}
+                      className="singleOptionCard"
+                      onClick={playSoundTrack}
+                    >
+                      <VolumeUpIcon
+                        id="volumeUpIconStyle"
+                        className="volumeUpIconStyle"
+                      />
+                    </div>
+                  </div>
+                  <div className="singleRadioButtonAndCard">
+                    <input
+                      className="radioButtonInputCircle"
+                      type="radio"
+                      name="audio"
+                      checked={
+                        `selectedSet${QuestionsData[index].id}` ===
+                        QuestionsData[index].audio3_name
+                      }
+                      value={QuestionsData[index].audio3_name}
+                      onChange={(e) =>
+                        radioChangeHandler(e, QuestionsData[index].id)
+                      }
+                    />
+                    <div
+                      id={`${QuestionsData[index].id}_audio3`}
+                      className="singleOptionCard"
+                      onClick={playSoundTrack}
+                    >
+                      <VolumeUpIcon
+                        id="volumeUpIconStyle"
+                        className="volumeUpIconStyle"
+                      />
+                    </div>
+                  </div>
+                  <div className="singleRadioButtonAndCard">
+                    <input
+                      className="radioButtonInputCircle"
+                      type="radio"
+                      name="audio"
+                      checked={
+                        `selectedSet${QuestionsData[index].id}` ===
+                        QuestionsData[index].audio4_name
+                      }
+                      value={QuestionsData[index].audio4_name}
+                      onChange={(e) =>
+                        radioChangeHandler(e, QuestionsData[index].id)
+                      }
+                    />
+                    <div
+                      id={`${QuestionsData[index].id}_audio4`}
+                      className="singleOptionCard"
+                      onClick={playSoundTrack}
+                    >
+                      <VolumeUpIcon
+                        id="volumeUpIconStyle"
+                        className="volumeUpIconStyle"
+                      />
+                    </div>
                   </div>
                 </div>
-                <div className="singleRadioButtonAndCard">
-                  <input
-                    className="radioButtonInputCircle"
-                    type="radio"
-                    name="audio"
-                    checked={
-                      `selectedSet${QuestionsData[index].id}` ===
-                      QuestionsData[index].audio2_name
-                    }
-                    value={QuestionsData[index].audio2_name}
-                    onChange={(e) =>
-                      radioChangeHandler(e, QuestionsData[index].id)
-                    }
-                  />
-                  <div
-                    id={`${QuestionsData[index].id}_audio2`}
-                    className="singleOptionCard"
-                    onClick={playSoundTrack}
-                  >
-                    <VolumeUpIcon
-                      id="volumeUpIconStyle"
-                      className="volumeUpIconStyle"
-                    />
+                {index === 9 ? (
+                  <div>
+                    <button className="testSubmitButton" onClick={getAnswers}>
+                      Submit
+                    </button>
                   </div>
-                </div>
-                <div className="singleRadioButtonAndCard">
-                  <input
-                    className="radioButtonInputCircle"
-                    type="radio"
-                    name="audio"
-                    checked={
-                      `selectedSet${QuestionsData[index].id}` ===
-                      QuestionsData[index].audio3_name
-                    }
-                    value={QuestionsData[index].audio3_name}
-                    onChange={(e) =>
-                      radioChangeHandler(e, QuestionsData[index].id)
-                    }
-                  />
-                  <div
-                    id={`${QuestionsData[index].id}_audio3`}
-                    className="singleOptionCard"
-                    onClick={playSoundTrack}
-                  >
-                    <VolumeUpIcon
-                      id="volumeUpIconStyle"
-                      className="volumeUpIconStyle"
-                    />
-                  </div>
-                </div>
-                <div className="singleRadioButtonAndCard">
-                  <input
-                    className="radioButtonInputCircle"
-                    type="radio"
-                    name="audio"
-                    checked={
-                      `selectedSet${QuestionsData[index].id}` ===
-                      QuestionsData[index].audio4_name
-                    }
-                    value={QuestionsData[index].audio4_name}
-                    onChange={(e) =>
-                      radioChangeHandler(e, QuestionsData[index].id)
-                    }
-                  />
-                  <div
-                    id={`${QuestionsData[index].id}_audio4`}
-                    className="singleOptionCard"
-                    onClick={playSoundTrack}
-                  >
-                    <VolumeUpIcon
-                      id="volumeUpIconStyle"
-                      className="volumeUpIconStyle"
-                    />
-                  </div>
-                </div>
-              </div>
-              {index === 9 ? (
-                <div>
-                  <button className="testSubmitButton" onClick={getAnswers}>
-                    Submit
-                  </button>
-                </div>
-              ) : (
-                none
-              )}
+                ) : (
+                  none
+                )}
               </div>
             </SwiperSlide>
           ))}

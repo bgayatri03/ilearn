@@ -4,7 +4,6 @@ import "../Styles/SnakesAndLaddersGridWithRamda.css";
 
 const SnakesAndLaddersGridWithRamda = (props) => {
   const myPosition = props.myPosition;
-  // console.log("myPosition",myPosition)
   return R.pipe(
     R.splitEvery(10),
     R.addIndex(R.map)((row, index) => {

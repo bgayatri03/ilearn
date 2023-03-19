@@ -5,14 +5,10 @@ import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import SlowMotionVideoIcon from "@mui/icons-material/SlowMotionVideo";
 
 const Learn = (props) => {
-  // console.log("myCategory   ", props.category);
-  // console.log("myData", myData);
-
   let animalArray = [];
   let birdArray = [];
   let generalArray = [];
   myData.forEach((item) => {
-    // console.log("In for each", item, index);
     if (props.category === "idAnimalCard" && item.category === "Animals") {
       animalArray.push(item);
     } else if (props.category === "idBirdCard" && item.category === "Birds") {
@@ -27,7 +23,6 @@ const Learn = (props) => {
 
   const playSoundAnimal = (e) => {
     const clickedId = e.currentTarget.id;
-    console.log("clickedId --- ", clickedId);
     let mySoundTrack;
     animalArray.forEach((item) => {
       if (clickedId === item.name) {
@@ -40,7 +35,6 @@ const Learn = (props) => {
 
   const playSoundBird = (e) => {
     const clickedId = e.currentTarget.id;
-    // console.log("clickedId --- ", clickedId);
     let mySoundTrack;
     birdArray.forEach((item) => {
       if (clickedId === item.name) {

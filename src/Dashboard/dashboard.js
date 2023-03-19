@@ -50,9 +50,6 @@ const Dashboard = () => {
       }
     }
   });
-  console.log("correctArray  -- ", correctArray);
-  console.log("wrongArray -- ", wrongArray);
-  console.log("skippedArray -- ", skippedArray);
 
   let reducedCorrectArray = correctArray.reduce((prev, curr) => {
     return prev + curr;

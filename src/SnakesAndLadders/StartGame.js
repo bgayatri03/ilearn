@@ -21,8 +21,6 @@ const StartGame = () => {
   const [snakeOrLadderPosition, setSnakeOrLadderPosition] = useState(0);
 
   const initGame = () => {
-    // console.log("Inside initGame")
-    console.log(checkAnimals, checkBirds, checkGeneral);
     setDisplayLayout(true);
     setHideThemeScreen(true);
   };
@@ -42,10 +40,6 @@ const StartGame = () => {
 
   const checkForSnakeOrLadder = (newPosition) => {
     const positionToCheckForSnakeOrLadder = newPosition;
-    console.log(
-      "positionToCheckForSnakeOrLadder",
-      positionToCheckForSnakeOrLadder
-    );
     allSnakesBoxes.forEach((snake) => {
       if (snake.currentPosition === positionToCheckForSnakeOrLadder) {
         setShowModal(true);
@@ -76,28 +70,21 @@ const StartGame = () => {
   };
 
   const changeHandler = (e) => {
-    console.log("e.target.value", e.target.value);
     setSelectedLevel(e.target.value);
   };
 
   // const handleChangeAnimals = () => {
   //     const newAnimal = !checkAnimals;
-  //     // console.log(checkAnimals)
-  //     // console.log(newAnimal)
   //     setCheckAnimals(newAnimal)
   // }
 
   // const handleChangeBirds = () => {
   //     const newBirds = !checkBirds;
-  //     console.log(checkBirds)
-  //     console.log(newBirds)
   //     setCheckBirds(newBirds)
   // }
 
   // const handleChangeGeneral = () => {
   //     const newGeneral = !checkGeneral;
-  //     console.log(checkGeneral)
-  //     console.log(newGeneral)
   //     setCheckGeneral(newGeneral)
   // }
 
@@ -106,7 +93,6 @@ const StartGame = () => {
   const [checkedState, setCheckedState] = useState(
     new Array(categoryArray.length).fill(false)
   );
-  console.log("checkedState", checkedState);
 
   const handleOnChange = (position, e) => {
     if (checkedState.filter((i) => i).length >= 2 && e.target.checked) return;
