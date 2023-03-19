@@ -38,5 +38,37 @@
     "correct": 9,
     "wrong": 2,
     "total": 11
+  },
+  {
+    "id": 6,
+    "type": "Game",
+    "Date": "3/19/2023",
+    "correct": 9,
+    "wrong": 2,
+    "total": 11
+  },
+  {
+    "id": 7,
+    "type": "Game",
+    "Date": "3/20/2023",
+    "correct": 9,
+    "wrong": 2,
+    "total": 11
+  },
+  {
+    "id": 8,
+    "type": "Game",
+    "Date": "3/21/2023",
+    "correct": 9,
+    "wrong": 2,
+    "total": 11
+  },
+  {
+    "id": 9,
+    "type": "Game",
+    "Date": "3/22/2023",
+    "correct": 9,
+    "wrong": 2,
+    "total": 11
   }
 ]
